@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(rgb(0, 0, 0), rgb(47, 20, 155));
+  overflow: hidden;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  opacity: 1;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+.actualMoon {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  animation-name: move;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.moon {
+  font-size: 60px;
+  transition: transform 0.4s ease;
+}
+
+.moon:hover {
+  transform: scale(1.3);
+}
+
+.star1,
+.star2,
+.star3,
+.star4,
+.star5 {
+  position: absolute;
+  font-size: 24px;
+  animation-name: glow;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.star1 {
+  top: 20%;
+  left: 20%;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+.star2 {
+  top: 35%;
+  left: 75%;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
+.star3 {
+  top: 60%;
+  left: 30%;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+.star4 {
+  top: 70%;
+  left: 80%;
+  animation-duration: 2.5s;
+  animation-delay: 1.5s;
+}
+.star5 {
+  top: 45%;
+  left: 50%;
+  animation-duration: 3.5s;
+  animation-delay: 2s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(70vh, 40px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
